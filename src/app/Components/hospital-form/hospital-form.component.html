@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <label for="" class="col-12 h1 my-5 text-center">Quản Lý Bệnh Viện </label>
+        </div>
+        <div class="col-6 offset-3">
+            <div class="form-group">
+                <!-- <label for="">Tên Bệnh Viện</label> -->
+                <input type="text" name="" id="" class="form-control mb-4" placeholder="Tên Bệnh Viện"
+                    (keyup)="hosptl.name = $event.target.value" [value]="hosptl.name">
+            </div>
+        </div>
+        <div class="col-6 offset-3">
+            <div class="form-group">
+                <!-- <label for="">Hình Ảnh</label> -->
+                <input type="text" name="" id="" class="form-control mb-4" placeholder="Hình Ảnh"
+                    (keyup)="hosptl.img = $event.target.value" [value]="hosptl.img">
+            </div>
+        </div>
+        <div class="col-6 offset-3">
+            <div class="form-group d-flex justify-content-center">
+                <!-- <label for="">Hình Ảnh</label> -->
+                <img [src]="hosptl.img" alt="" class="img-preserve" width="100px">
+            </div>
+        </div>
+        <div class="col-6 offset-3">
+            <div class="form-group">
+                <!-- <label for="">Tên Giám Đốc</label> -->
+                <input type="text" name="" id="" class="form-control mb-4" placeholder="Tên Giám Đốc"
+                    (keyup)="hosptl.hopManagerName = $event.target.value" [value]="hosptl.hopManagerName">
+            </div>
+        </div>
+        <div class="col-6 offset-3">
+            <div class="form-group">
+                <!-- <label for="">Địa Chỉ</label> -->
+                <input type="text" name="" id="" class="form-control mb-4" placeholder="Địa Chỉ"
+                    (keyup)="hosptl.address = $event.target.value" [value]="hosptl.address">
+            </div>
+        </div>
+        <div class="col-6 offset-3">
+            <div class="form-group">
+                <label for="" class="col-12 text-center h4 my-4">Số Nhiễm</label>
+                <div class="d-flex justify-content-around">
+                    <label class="">Tổng Số</label>
+                    <label class="">Đã Khỏi</label>
+                    <label class="">Tử Vong</label>
+                </div>
+                <div class="d-flex justify-content-around">
+                    <input type="number" name="" id="" class="form-control col-3 " placeholder=""
+                        (change)="checkSoLg($event);hosptl.sumCovid19 = $event.target.value;"
+                        (keyup)="checkSoLg($event);hosptl.sumCovid19 = $event.target.value;" [value]="hosptl.sumCovid19">
+                    <input type="number" name="" id="" class="form-control col-3" placeholder=""
+                        (change)="checkSoLg($event);hosptl.cured = $event.target.value;"
+                        (keyup)="checkSoLg($event);hosptl.cured = $event.target.value;" [value]="hosptl.cured">
+                    <input type="number" name="" id="" class="form-control col-3" placeholder=""
+                        (change)="checkSoLg($event);hosptl.died = $event.target.value;"
+                        (keyup)="checkSoLg($event);hosptl.died = $event.target.value;" [value]="hosptl.died">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-4 text-center h5 my-2 offset-2">Tổng</label>
+                <label for="" class="col-4 text-center h5 my-2 text-danger">{{hosptl.sumCovid19}}</label>
+            </div>
+        </div>
+        <div class="col-4 offset-4">
+            <div class="form-group d-flex justify-content-around">
+                <button type="button" class="btn btn-success" (click)="saveHosptl();">Thêm</button>  <!-- addHopt(); -->
+                <button type="button" class="btn btn-danger" (click)="canelHoptEvent()">Hủy</button>  
+            </div>
+        </div>
+    </div>
+</div>    

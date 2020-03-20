@@ -1,0 +1,11 @@
+<hospital-form
+  [hosptl] ="hospital"
+  (saveHospital) ="addHopt($event)"
+  (canelHopt) = "canelHopt()">
+</hospital-form>
+
+<hospital-info 
+  [hospital]="hospitalList"
+  (delHopstl)="deleteHop($event)" 
+  (editHopstl)="editHoptl($event)">
+</hospital-info>
