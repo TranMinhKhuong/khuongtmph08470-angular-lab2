@@ -32,6 +32,8 @@ export class HospitalComponent implements OnInit {
     }
   ];
 
+  
+
   hospital: Hospital = {
     id: null,
     nameHospital: null,
