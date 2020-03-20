@@ -1,9 +1,9 @@
 export class Hospital {
   id: number;
-  name: string;
-  img: string;
+  nameHospital: string;
+  imgHospital: string;
   hopManagerName: string;
-  address: string;
+  addressHospital: string;
   sumCovid19: number;
   cured: number;
   died: number;
