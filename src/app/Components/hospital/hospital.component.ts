@@ -71,11 +71,6 @@ export class HospitalComponent implements OnInit {
     });
   }
 
-  // printLog(hosptl: Hospital) {
-  //   // console.log(...this.hospitalList);
-  //   console.log(hosptl);
-  //   alert(1);
-  // }
 
   canelHopt() {
     this.hospital = {
